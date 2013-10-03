@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Страница не найдена
+{% endblock %}
+
+{% block content %}
+    <style type="text/css">
+        a
+        {
+            color: #06A5DB;
+            font-size: 20px;
+            -webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;-ms-transition: all 0.2s linear;transition: all 0.2s linear;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: rgb(169, 233, 255);
+            font-size: 20px;
+        }
+    </style>
+	<h3>Запрашиваемой страницы никогда не было или она была удалена.</h3>
+	Перейти на <a href="/">главную</a> страницу сайта.
+
+{% endblock %}

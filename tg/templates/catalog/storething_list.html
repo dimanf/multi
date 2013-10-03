@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load pagination_tags %}
+
+{% block title %}
+Каталог мультиварок
+{% endblock %}
+
+{% block catalog %}
+
+     <section id="content"><div class="ic"><div class="inner_copy"></div></div>
+        <div class="main">
+            <div class="container">
+                <h3 class="prev-indent-bot"><b>Каталог мультиварок</b></h3>
+                <div id="slider-2">
+                {% for item in storething_list %}
+                    <div class="p4" style="float: left;">
+                        <figure><a class="lightbox-image" href="/catalog/item/{{ item.id }}/" data-gal="prettyPhoto[prettyPhoto]"><img src="{{ MEDIA_URL }}{{ item.get_image }}" style="width: 175px;"></a></figure>
+                        <h5 class="p1">{{ item.name }}</h5>
+                        <hr>
+                        {% autoescape off %}
+                            <p class="p2">{{ item.desc|truncatewords_html:10 }}</p>
+                        {% endautoescape %}
+                        <p class="p2"><strong class="color-2">Цена: {{ item.price }}р</strong></p>
+                        <a class="button-1" href="/catalog/item/{{ item.id }}/">Заказать</a>
+                    </div>
+                {% empty %}
+                    <p>Не товара.</p>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

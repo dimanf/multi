@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load pagination_tags %}
+
+{% block title %}
+Каталог мультиварок
+{% endblock %}
+
+{% block catalog %}
+<style type="text/css">
+    h6:hover {
+        color: #A2D609;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+</style>
+    <section id="content"><div class="ic"><div class="inner_copy"></div></div>
+        <div class="main">
+            <div class="container">
+                <h3 class="prev-indent-bot"><b>Каталог</b></h3>
+                <div id="news">
+
+                {% for item in storecategory_list %}
+                <div>
+                        <a href="/catalog/{{ item.id }}/"><h6 class="p2">{{ item.name }} ({{ item.get_thing_count }})</h6></a>
+                        <hr>
+                </div>
+                {% empty %}
+
+                    <p>Не категорий.</p>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

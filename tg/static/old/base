@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" class="chrome chrome27 desktop"><head><!-- Created by Artisteer v4.0.0.58475 -->
+    <meta charset="utf-8">
+    <title>Home</title>
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+<style>.art-content .art-postcontent-0 .layout-item-0 { padding-right: 5px;padding-left: 5px;  }
+.ie7 .post .layout-cell {border:none !important; padding:0 !important; }
+.ie6 .post .layout-cell {border:none !important; padding:0 !important; }
+
+</style></head>
+<body>
+<div id="art-main">
+    <div class="art-sheet clearfix">
+<header class="art-header clearfix">
+
+
+    <div class="art-shapes">
+<h1 class="art-headline" data-left="33.02%">
+    <a href="#">Детский мир</a>
+</h1>
+
+
+            </div>
+
+                <div id="art-flash-area">
+                    <div id="art-flash-container">
+                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1100" height="311" id="art-flash-object">
+                        <param name="movie" value="images/flash.swf">
+                        <param name="quality" value="high">
+                      <param name="scale" value="exactfit">
+                      <param name="wmode" value="transparent">
+                      <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.50&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                        <param name="swfliveconnect" value="true">
+                        <!--[if !IE]>-->
+                        <object type="application/x-shockwave-flash" data="images/flash.swf" width="1100" height="311">
+                            <param name="quality" value="high">
+                          <param name="scale" value="exactfit">
+                            <param name="wmode" value="transparent">
+                                                          <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.50&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                            <param name="swfliveconnect" value="true">
+                        <!--<![endif]-->
+                            <div class="art-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"></a></div>
+                        <!--[if !IE]>-->
+                        </object>
+                        <!--<![endif]-->
+                    </object>
+                    </div>
+                    </div>
+                    
+</header>
+<nav class="art-nav clearfix desktop-nav">
+    <ul class="art-hmenu"><li><a href="контакты.html" class="active">Контакты</a></li><li><a href="карта-саита.html">Карта сайта</a></li><li><a href="поиск-по-саиту.html">Поиск по сайту</a></li><li><a href="форум.html">ФОРУМ</a></li></ul> 
+    </nav>
+<div class="art-layout-wrapper clearfix">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-sidebar1 clearfix"><div class="art-vmenublock clearfix">
+        <div class="art-vmenublockheader">
+            <h3 class="t">Главное меню</h3>
+        </div>
+        <div class="art-vmenublockcontent">
+<ul class="art-vmenu"><li><a href="контакты.html" class="active">Контакты</a></li><li><a href="карта-саита.html">Карта сайта</a></li><li><a href="поиск-по-саиту.html">Поиск по сайту</a></li><li><a href="форум.html">ФОРУМ</a></li></ul>
+                
+        </div>
+</div></div>
+                        <div class="art-layout-cell art-content clearfix"><article class="art-post art-article">
+                                <div class="art-postmetadataheader">
+                                        <h2 class="art-postheader">{% block title %}{% endblock %}</h2>
+                                    </div>
+                                {% block content %}{% endblock %}
+                                <!-- <div class="art-postmetadataheader">
+                                        <h2 class="art-postheader">Home</h2>
+                                    </div>
+                                                
+                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 50%">
+        <img width="168" height="121" alt="" class="art-lightbox" src="images/0_77f53_8dd3e0e42_L.png"><br>
+        Enter Page content here...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris.&nbsp;Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.
+        <p><a href="#">Read more</a></p>
+    </div><div class="art-layout-cell layout-item-0" style="width: 50%">
+        <div style="margin-left: 2em">         </div>
+        <p><img width="125" height="91" alt="" class="art-lightbox" src="images/0_7809b_4274cd2612345_L.png"><br></p>
+        <p>Suspendisse pharetra auctor pharetra. Nunc a sollicitudin est.</p>
+        <div style="margin-left: 2em">         </div>
+        <p>Donec vel neque in neque porta venenatis sed sit amet lectus.</p>
+        <div style="margin-left: 2em">         </div>
+        <p>Curabitur ullamcorper gravida felis, sit amet scelerisque lorem iaculis sed.</p>
+        <div style="margin-left: 2em">         </div>
+        <p>Suspendisse pharetra auctor pharetra. Nunc a sollicitudin est.<br></p>
+        <div style="margin-left: 2em">         </div>
+    </div>
+    </div>
+</div>
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 100%">
+        <blockquote style="margin: 10px 0">Nunc a sollicitudin est. Curabitur ullamcorper gravida felis, sit amet scelerisque lorem iaculis sed. Donec vel neque in neque porta venenatis sed sit amet lectus.</blockquote>
+    </div>
+    </div>
+</div>
+</div>
+                                 -->
+                </article></div>
+                        <div class="art-layout-cell art-sidebar2 clearfix"><div class="art-block clearfix">
+        <div class="art-blockheader">
+            <h3 class="t">Последние новости</h3>
+        </div>
+        <div class="art-blockcontent"><div>
+  <ul>
+    <li>
+      <a href="#">My first blog</a>
+    </li>
+    <li>
+      <a href="#">Who will prevail?</a>
+    </li>
+    <li>
+      <a href="#">Stay positive!</a>
+    </li>
+    <li>
+      <a href="#">Oil still going up</a>
+    </li>
+    <li>
+      <a href="#">Gripes and Grins</a>
+    </li>
+    <li>
+      <a href="#">2012 Olympics</a>
+    </li>
+    <li>
+      <a href="#">How to SEO</a>
+    </li>
+    <li>
+      <a href="#">On Global Warming</a>
+    </li>
+    <li>
+      <a href="#">Can you guess?</a>
+    </li>
+  </ul>
+</div></div>
+</div><div class="art-block clearfix">
+        <div class="art-blockheader">
+            <h3 class="t">Архив новостей</h3>
+        </div>
+        <div class="art-blockcontent"><div>
+  <ul>
+    <li>
+      <a href="#" title="November 2008">November 2008</a>
+    </li>
+    <li>
+      <a href="#" title="October 2008">October 2008</a>
+    </li>
+    <li>
+      <a href="#" title="September 2008">September 2008</a>
+    </li>
+    <li>
+      <a href="#" title="June 2008">June 2008</a>
+    </li>
+  </ul>
+</div></div>
+</div></div>
+                    </div>
+                </div>
+            </div><footer class="art-footer clearfix">
+<p><a href="http://delodom.com" title="http://delodom.com">delodom.com</a><a href="#"></a><a href="#"></a></p>
+<p>Copyright © 2013. All Rights Reserved.</p>
+</footer>
+
+    </div>
+    <p class="art-page-footer">
+        <span id="art-footnote-links">Designed by <a href="http://delodom.com" target="_blank">http://delodom.com</a>.</span>
+    </p>
+</div>
+
+
+</body></html>

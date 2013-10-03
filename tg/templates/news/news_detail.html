@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ news.title }}
+{% endblock %}
+
+{% block content %}
+
+<article class="art-post art-article">
+            <div class="art-postmetadataheader">
+                    <h2 class="art-postheader" style="color: #FA5705;">{{ news.title }}
+                    </h2>
+            </div>
+            <div class="art-postheadericons art-metadata-icons">
+                <span class="art-postdateicon">{{ news.date_create }}</span>
+                 <!-- | <span class="art-postediticon"></span> -->
+            </div>
+        <div class="art-postcontent art-postcontent-0 clearfix">
+        <div class="art-content-layout">
+        <div class="art-content-layout-row">
+        <div class="art-layout-cell layout-item-0" style="width: 33%"><br>
+            {% autoescape off %}
+                <p>{{ news.text }}</p>
+            {% endautoescape %}
+        <!-- Lorem&nbsp;<sup>superscript</sup>&nbsp;dolor&nbsp;<sub>subscript</sub>&nbsp;amet, consectetuer adipiscing elit,&nbsp;<a href="#" title="test link">test link</a>. Nullam dignissim convallis est. Quisque aliquam.&nbsp;<cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&nbsp;
+        <p>Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.</p> -->
+        </div>
+        </div>
+        </div>
+        </div>
+            <!-- <div class="art-postmetadatafooter">
+                <div class="art-postfootericons art-metadata-icons">
+                    <span class="art-postcategoryicon">Category: No Category</span>
+                     | <span class="art-posttagicon">Tags: <a href="#" title="link">link</a>, <a href="#" title="visited link" class="visited">visited</a>, <a href="#" title="hovered link" class="hover">hovered</a></span>
+                     | <span class="art-postcommentsicon"><a href="#" title="Comments">No Comments »</a></span>
+                </div>
+            </div> -->
+    </article>
+
+{% endblock %}
+
+{% block news %}
+    {% for news in last_news %}
+        <li>
+          <a href="/news/{{ news.id }}/">{{ news.title }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}

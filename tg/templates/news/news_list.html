@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load pagination_tags %}
+
+{% block title %}
+Новости
+{% endblock %}
+
+{% block content %}
+<style>
+   hr {
+    border: none;
+    background-color: #999999;
+    color: #999999;
+    height: 1px;
+   }
+</style>
+
+
+    <h3 class="p1">Последние новости</h3>
+    {% for news in object_list %}
+        <div id="news">
+            <h6 class="p2">{{ news.title }}</h6>
+            <hr>
+            {% autoescape off %}
+                <p class="p2">{{ news.text }}</p>
+            {% endautoescape %}
+            <!-- <a class="button-2" href="{{ news.get_absolute_url }}">Подробнее</a> -->
+        </div>
+    {% empty %}
+        <p class="p2">Нет новостей</p>
+    {% endfor %}
+{% endblock %}

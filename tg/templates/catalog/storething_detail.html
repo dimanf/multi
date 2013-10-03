@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% load pagination_tags %}
+
+{% block title %}
+Каталог мультиварок
+{% endblock %}
+
+{% block catalog %}
+<style type="text/css">
+textarea {
+    border: 1px solid #E76E3F;
+    background: #FFF7F7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #C7652F;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 280px;
+   }
+input {
+    border: 1px solid #E76E3F;
+    background: #FFF7F7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #C7652F;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 280px;
+   }
+.form-container {
+   border: 1px solid #f2e3d2;
+   background: #c9b7a2;
+   background: -webkit-gradient(linear, left top, left bottom, from(#f2e3d2), to(#c9b7a2));
+   background: -webkit-linear-gradient(top, #f2e3d2, #c9b7a2);
+   background: -moz-linear-gradient(top, #f2e3d2, #c9b7a2);
+   background: -ms-linear-gradient(top, #f2e3d2, #c9b7a2);
+   background: -o-linear-gradient(top, #f2e3d2, #c9b7a2);
+   background-image: -ms-linear-gradient(top, #f2e3d2 0%, #c9b7a2 100%);
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width:300px;
+   padding:20px;
+   width:300px;
+   }
+.form-field {
+   border: 1px solid #c9b7a2;
+   background: #e4d5c3;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   color: #c9b7a2;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   padding:8px;
+   margin-bottom:20px;
+   width:280px;
+   }
+.form-field:focus {
+   background: #fff;
+   color: #725129;
+   }
+.form-container h2 {
+   text-shadow: #fdf2e4 0 1px 0;
+   font-size:18px;
+   margin: 0 0 10px 0;
+   font-weight:bold;
+   text-align:center;
+    }
+.form-title {
+   margin-bottom:10px;
+   color: #725129;
+   text-shadow: #fdf2e4 0 1px 0;
+   }
+.submit-container {
+   margin:8px 0;
+   text-align:right;
+   }
+.submit-button {
+   border: 1px solid #447314;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #addc7e 0 1px 0;
+   color: #31540c;
+   font-family: helvetica, serif;
+   padding: 8.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.submit-button:hover {
+   border: 1px solid #447314;
+   text-shadow: #31540c 0 1px 0;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   color: #fff;
+   }
+.submit-button:active {
+   text-shadow: #31540c 0 1px 0;
+   border: 1px solid #447314;
+   background: #8dc059;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#6aa436));
+   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
+   background: -moz-linear-gradient(top, #6aa436, #8dc059);
+   background: -ms-linear-gradient(top, #6aa436, #8dc059);
+   background: -o-linear-gradient(top, #6aa436, #8dc059);
+   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
+   color: #fff;
+   }
+</style>
+
+     <section id="content">
+        <div class="main">
+            <div class="container">
+                <h3 class="prev-indent-bot"><b>Каталог</b></h3>
+                <div id="slider-2">
+                    <div class="p4" style="float: left;width: 93%;">
+                        <figure><a class="lightbox-image" href="/catalog/{{ thing.id }}/" data-gal="prettyPhoto[prettyPhoto]"><img src="{{ MEDIA_URL }}{{ thing.get_image }}" style="width: 175px;"></a></figure>
+                        <h5 class="p1">{{ thing.name }} {{ q }}</h5>
+                        <hr>
+                        <p class="p2"><strong class="color-2">Цена: {{ thing.price }}р</strong></p>
+                        <a class="button-1" href="#order"><strong>Заказать</strong></a>
+                        {% autoescape off %}
+                          <p class="p2">{{ thing.desc }}</p>
+                        {% endautoescape %}
+                        <hr>
+                            <style type="text/css">
+                                .error-labels{
+                                  border: dotted;
+                                  border-color: rgb(230, 44, 19);
+                                  padding: 22px;
+                                  margin-bottom: 26px;
+                                  -moz-border-radius: 16px;
+                                  -webkit-border-radius: 16px;
+                                  border-radius: 16px;
+                                }
+                            </style>
+
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    var form = $('#form-container');
+                                    var errors = $('#qaul.errorlist');
+
+                                    form.find("a[data-type='submit']").click(function() {
+                                        $('#qa-submit').click();
+                                    });
+
+                                    form.find("a[data-type='reset']").click(function() {
+                                        form.find('input, textarea').val('');
+                                        form.find('div.field').removeClass('error');
+                                        errors.empty();
+                                    });
+
+                                    $('#id_phone').mask('+7 (999) 999 99 99');
+                                })
+                            </script>
+
+                            <div id="order">
+                                <p class="p2"><b>Для того чтобы заказать данный товар, заполните форму обратной связи и мы обязательно свяжемся с вам! Либо, свяжитесь с нами по телефону <span style="font-size: 16px;color: rgb(85, 85, 85);">+7 922 268 4452</span>.</b></p>
+                            </div>
+                            {% if order_form.errors %}
+                                <p id="test" style="color: rgb(255, 0, 0); font-size: 21px;"><b>Не верно заполнены следующие поля:</b></p>
+                                <div class="error-labels">
+                                  <ul>
+                                    {% if order_form.s_name.errors %}
+                                      <li><label id="id_s_name"><b>Фамилия:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                    {% if order_form.name.errors %}
+                                      <li><label id="id_name"><b>Имя:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                    {% if order_form.p_name.errors %}
+                                      <li><label id="id_p_name"><b>Отчество:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                    {% if order_form.address.errors %}
+                                      <li><label id="id_address"><b>Адрес:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                    {% if order_form.phone.errors %}
+                                      <li><label id="id_phone"><b>Телефон:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                    {% if order_form.email.errors %}
+                                      <li><label id="id_email"><b>Email:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                    {% if order_form.quantity.errors %}
+                                      <li><label id="id_email"><b>Количество:</b> Обязательное поле.</label></li>
+                                    {% endif %}
+                                  </ul>
+                                </div>
+                            {% endif %}
+
+                            <form id="form-container" action="" method="post">
+
+                            {% if order_form.s_name.errors %}<div class="errorfield"> {% else %} <div> {% endif %}
+                                {{ order_form.s_name }}
+                            </div>
+                            {% if order_form.name.errors %}<div class="errorfield"> {% else %} <div> {% endif %}
+                                {{ order_form.name }}
+                            </div>
+                            {% if order_form.p_name.errors %}<div class="errorfield"> {% else %} <div> {% endif %}
+                                {{ order_form.p_name }}
+                            </div>
+                            {% if order_form.address.errors %}<div class="errorfield"> {% else %} <div> {% endif %}
+                                {{ order_form.address }}
+                            </div>
+                            {% if order_form.phone.errors %}<div class="errorfield" id="id_phone"> {% else %} <div id="id_phone"> {% endif %}
+                                {{ order_form.phone }}
+                            </div>
+                            {% if order_form.email.errors %}<div class="errorfield"> {% else %} <div> {% endif %}
+                                {{ order_form.email }}
+                            </div>
+                            {% if order_form.quantity.errors %}<div class="errorfield"> {% else %} <div> {% endif %}
+                                {{ order_form.quantity }}
+                            </div>
+
+                            <div id="qa-button">
+                                <a class="button-1" data-type="submit"><strong>Оформить заказ</strong></a>
+                            </div>
+                            <input id="qa-submit" type="submit" value="Отправить" style="display: none;">
+                            <!-- <input id="qa-submit" type="submit" value="Отправить"> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

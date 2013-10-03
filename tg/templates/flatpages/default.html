@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{ flatpage.title }}
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("img").parent().attr('rel', 'shadowbox[a]');
+        $('#content-flat').tooltip({placement: 'top'})
+    });
+</script>
+<div id="content-flat">
+	{{ flatpage.content }}    
+</div>
+{% endblock %}		
+
+{% block news %}
+    {% for news in last_news %}
+        <li>
+          <a href="/news/{{ news.id }}/">{{ news.title }}</a>
+        </li>
+    {% endfor %}    
+{% endblock %}
